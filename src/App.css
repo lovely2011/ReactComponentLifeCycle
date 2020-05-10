@@ -1,7 +1,16 @@
+@import "./css/home.css";
+
 .App {
+  height: 100vh;
+  min-width: 700px;
   text-align: center;
+  color: darkorange;
+  background-color: black
 }
 
+.App.bold{
+  font-weight: bold;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

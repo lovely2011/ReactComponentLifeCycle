@@ -1,0 +1,35 @@
+
+
+.homePage {
+    height: 100%;
+}
+
+.homePage .header {
+    height: 60px;
+    color: #FFFFFF;
+    background-color: #26273d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+/* .homePage.body {
+  
+    display: flex;
+    background: cover;
+    background-image: url("/src/images/flight.jpg");
+} */
+.homePage.back {
+    
+    height: 100%;
+    position: fixed;
+    opacity: 0.8;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 10002;
+}

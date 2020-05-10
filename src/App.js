@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
+import Home from './components/HomePage'
 import './App.css';
 
-function App() {
+class App extends Component {
+
+  constructor(props){
+    super(props)
+    this.state={
+      value:0
+    }
+    this.setNewValue= this.setNewValue.bind(this)
+  }
+  setNewValue(){
+    this.setState(
+      {
+        value:this.state.value+5
+      }
+    )
+  }
+
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className ="App">
+      <h4>Demonstration of Component Life Cycle</h4>
+      <div className="bold">
+      <button onClick={this.setNewValue}>MULTIPLY BY 5</button>
+      <Home myValue={this.state.value}></Home>
+      </div>
     </div>
   );
+
+  }
+
 }
 
 export default App;
