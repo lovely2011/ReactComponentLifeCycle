@@ -4,6 +4,7 @@ import './App.css';
 
 class App extends Component {
 
+  //Constructor is called for initialization
   constructor(props){
     super(props)
     this.state={
@@ -11,6 +12,7 @@ class App extends Component {
     }
     this.setNewValue= this.setNewValue.bind(this)
   }
+
   setNewValue(){
     this.setState(
       {
