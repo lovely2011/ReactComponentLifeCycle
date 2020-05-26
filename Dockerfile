@@ -13,7 +13,7 @@ RUN yarn build
 # COPY . ./
 # RUN npm run build
 
-# Stage 2-based on Nginx, contains only the compiled app, ready for production with Nginx
+# Stage 2-based on Nginx, contains only the compiled app, ready for production with Nginx server
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 60
