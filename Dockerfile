@@ -1,3 +1,4 @@
+# Stage 1- Building stage with Node.js- build and compile the app
 FROM node:10 AS build
 WORKDIR /app
 COPY . ./
@@ -12,7 +13,8 @@ RUN yarn build
 # COPY . ./
 # RUN npm run build
 
-FROM nginx:1.13.12-alpine
+# Stage 2-based on Nginx, contains only the compiled app, ready for production with Nginx
+FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 60
 CMD ["nginx", "-g", "daemon off;"]
