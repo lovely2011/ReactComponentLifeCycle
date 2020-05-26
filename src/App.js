@@ -16,7 +16,7 @@ class App extends Component {
   setNewValue(){
     this.setState(
       {
-        value:this.state.value+5
+        value:this.state.value+2
       }
     )
   }
@@ -26,7 +26,7 @@ class App extends Component {
     <div className ="App">
       <h4>Demonstration of Component Life Cycle</h4>
       <div className="bold">
-      <button onClick={this.setNewValue}>MULTIPLY BY 5</button>
+      <button onClick={this.setNewValue}>MULTIPLY BY 2</button>
       <Home myValue={this.state.value}></Home>
       </div>
     </div>
