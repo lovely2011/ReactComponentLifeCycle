@@ -20,7 +20,7 @@
     background: cover;
     background-image: url("/src/images/flight.jpg");
 } */
-/* .homePage.back {
+.homePage.back {
     
     height: 100%;
     position: fixed;
@@ -32,4 +32,4 @@
     top: 0;
     left: 0;
     z-index: 10002;
-} */
+}
